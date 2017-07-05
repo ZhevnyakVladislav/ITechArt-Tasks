@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|PT+Sans:400,400i,700,700i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
 body {
     margin: 0;
 }
 
 header {
-   width: 1920px;
    height: 90px; 
    display: flex;
    align-items: center;
@@ -26,51 +26,127 @@ header nav {
 header nav a {
     text-decoration: none;
     margin: auto;
+    position: relative;
 }
 
-header nav a .arrow {
+header nav a .link .link-arrow {
+    position: absolute;
     display: none;
+    width: 20px;
+    height: 20px;
+    bottom: 20px;
+    left: 30%;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9IjIzLjEsMzQuMSA1MS41LDYxLjcgODAsMzQuMSA4MS41LDM1IDUxLjUsNjQuMSAyMS41LDM1IDIzLjEsMzQuMSAiLz48L3N2Zz4=);
 }
 
-header nav a .link-text {
+header nav a .link .link-text {
     font: bold 16px 'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
-header nav a .link-text:hover {
+header nav a .link:hover .link-arrow {
+    display: block;
+}
+
+header nav a .link:hover .link-text {
     color: rgb(228, 85, 79);
 }
 
 section.banner {
-    width: 1920px;
     height: 520px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(http://via.placeholder.com/1920x520);
+    background-image: url("./images/wallpaperwide.png");
 }
 
 section.banner .banner-header {
     width: 470px;
-    font:  40px/52px 'PT Sans Narrow';
+    font:  700 40px/52px 'PT Sans';
     color: white;
     text-decoration: underline;
-    letter-spacing: 0.2pc;
+    letter-spacing: 0.06em;
     text-align: center;
 }
 
 section.banner .banner-text {
     width: 370px;
-    font:  20px/26px 'Lato';
+    font:  400 16px/26px 'Lato';
+    text-transform: uppercase;
     color: white;
-    letter-spacing: 0.3pc;
+    letter-spacing: 0.2em;
     text-align: center;
     margin: 30px 0;
 }
+
 section.banner .icon-down {
-    width: 60px;
-    height: 60px;
-    background-color: red;
-    /*background-image: url(http://via.placeholder.com/60x60);*/
+    width: 70px;
+    height: 70px;
+    background-image: url(http://via.placeholder.com/70x70);
+}
+
+section.main-title {
+    height: 140px;
+    display: flex;
+    font-family:'Source Sans Pro';
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(99, 127, 131);
+}
+
+section.main-title h1 {
+    font-weight: bold;
+    font-size: 34px;
+    margin: 0;
+}
+
+section.main-title h2 {
+    font-weight: lighter;
+    font-size: 24px;
+    margin: 0;
+}
+
+section.featured-content {
+    height: 374px;
+    background-color: rgb(246, 246, 246);
+    display: flex;
+    justify-content: center;
+}
+
+section.featured-content div {
+    height: 100%;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Source Sans Pro';
+    color: rgb(99, 127, 131);
+}
+
+section.featured-content div h3 {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+section.featured-content div p {
+    width: 85%;
+    font-weight: 400;
+    font-size: 14px/20px;
+    text-align: center;
+}
+
+section.featured-content div button {
+    width: 70px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(99, 127, 131);
+    color:rgb(255, 255, 255);
+    font-size: 16px/20px;
+    font-weight: 900;
+    text-align: center;
 }
