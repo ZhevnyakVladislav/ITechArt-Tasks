@@ -33,10 +33,44 @@ header nav a .arrow {
 }
 
 header nav a .link-text {
-    font: bold 16px 'Source Sans Pro', black;
+    font: bold 16px 'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
 header nav a .link-text:hover {
     color: rgb(228, 85, 79);
+}
+
+section.banner {
+    width: 1920px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(http://via.placeholder.com/1920x520);
+}
+
+section.banner .banner-header {
+    width: 470px;
+    font:  40px/52px 'PT Sans Narrow';
+    color: white;
+    text-decoration: underline;
+    letter-spacing: 0.2pc;
+    text-align: center;
+}
+
+section.banner .banner-text {
+    width: 370px;
+    font:  20px/26px 'Lato';
+    color: white;
+    letter-spacing: 0.3pc;
+    text-align: center;
+    margin: 30px 0;
+}
+section.banner .icon-down {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    /*background-image: url(http://via.placeholder.com/60x60);*/
 }
