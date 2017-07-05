@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+header {
+   width: 1920px;
+   height: 90px; 
+   display: flex;
+   align-items: center;
+}
+
+header .logo {
+    width: 170px;
+    margin-left: 374px;
+    font: 900 32px/26px  'Source Sans Pro', black;
+    color: rgb(99, 127, 131);
+}
+
+header nav {
+   margin-left: 400px;
+   width: 600px;
+   display: flex;
+   flex-direction: row;
+}
+
+header nav a {
+    text-decoration: none;
+    margin: auto;
+}
+
+header nav a .arrow {
+    display: none;
+}
+
+header nav a .link-text {
+    font: bold 16px 'Source Sans Pro', black;
+    color: rgb(99, 127, 131);
+}
+
+header nav a .link-text:hover {
+    color: rgb(228, 85, 79);
+}
