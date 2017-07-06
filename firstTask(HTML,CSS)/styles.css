@@ -92,13 +92,13 @@ section.main-title {
 }
 
 section.main-title h1 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 34px;
     margin: 0;
 }
 
 section.main-title h2 {
-    font-weight: lighter;
+    font-weight: 300;
     font-size: 24px;
     margin: 0;
 }
@@ -321,6 +321,8 @@ footer .content .subscribe .form input {
     border: 0;
     margin-right: 10px;
     border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
 }
 
 footer .content .subscribe .form button {
