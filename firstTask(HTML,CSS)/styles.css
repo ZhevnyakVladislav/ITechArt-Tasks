@@ -61,7 +61,7 @@ section.banner {
     background-image: url("./images/wallpaperwide.png");
 }
 
-section.banner h1{
+section.banner h1 {
     width: 470px;
     font:  700 40px/52px 'PT Sans';
     color: white;
@@ -79,12 +79,6 @@ section.banner h2 {
     letter-spacing: 0.2em;
     text-align: center;
     margin: 30px 0;
-}
-
-section.banner .icon-down {
-    width: 70px;
-    height: 70px;
-    background-image: url(http://via.placeholder.com/70x70);
 }
 
 section.main-title {
@@ -165,13 +159,13 @@ section.portfolio {
 }
 
 section.portfolio h1 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 34px;
     margin: 0;
 }
 
 section.portfolio h2 {
-    font-weight: lighter;
+    font-weight: 300;
     font-size: 24px;
     margin: 0;
 }
@@ -194,12 +188,9 @@ section.portfolio .controls hr:last-child {
 }
 
 section.portfolio .controls img {
-    margin: 30px 10px ;
+    margin: 30px 5px ;
 }
 
-section.portfolio img {
-    margin: 10px 0;
-}
 
 section.portfolio button {
     width: 150px;
@@ -211,4 +202,203 @@ section.portfolio button {
     font: 700 18px 'Source Sans Pro';
     letter-spacing: 0.002em;
     color: rgb(255, 255, 255);
+}
+
+section.row { 
+    width: 1170px;
+    margin: 45px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+section.row .content {
+    width: 570px;
+    display: flex;
+    margin: 15px 0;
+}
+
+section.row .content img {
+    width: 100px;
+    height: 100px;
+}
+
+section.row .content .description {
+    padding: 0 30px;
+    font-family: 'Source Sans Pro';
+    color: rgb(99, 127, 131);
+}
+
+section.row .content .description h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+section.row .content .description p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color:rgb(148,148,148)
+}
+
+section.row .content .description p a {
+    color:  rgb(228, 85, 29);
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(99, 127, 131);
+    color: rgb(255, 255, 255);
+    padding: 35px 0;
+    font-family: 'Source Sans Pro'
+}
+
+footer h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+footer h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+
+footer .content {
+    width: 1170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px;
+}
+
+footer .content .subscribe {
+    width: 570px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+footer .content .subscribe .description {
+    display: flex;
+    align-items: center;
+}
+
+footer .content .subscribe .description .title {
+    padding: 0 20px;
+}
+
+footer .content .subscribe .description .title h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer .content .subscribe .description .title h4 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer .content .subscribe .form {
+    display:  flex;
+    width: 100%;
+    padding: 30px 30px 0 0;
+}
+
+footer .content .subscribe .form input {
+    width: 100%;
+    background-color: rgb(89, 114, 117);
+    border: 0;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+footer .content .subscribe .form button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(89, 114, 117);
+    border: 0;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: inherit;
+    line-height: 25.6px;
+    letter-spacing: 0.002em;
+    color: rgb(255, 255, 255);
+}
+
+footer .twitter {
+    width: 570px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(89, 114, 117);
+    padding: 20px 30px;
+}
+
+footer .twitter p {
+    margin: 0;
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color:  rgb(181, 199, 201);
+}
+
+footer .twitter p a {
+    text-decoration: underline;
+    color:  rgb(255, 255, 255);
+}
+
+footer .social {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    color: rgb(99, 127, 131);
+    background-color: rgb(255, 255, 255);
+}
+
+footer .social .shape {
+    display: flex;
+    align-items: center;
+    margin: 0 130px;
+} 
+
+footer .social .shape div {
+    display: flex;
+    flex-direction: column;
+} 
+
+footer .social .shape h3 {
+    margin: 0;
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer .social .shape h4 {
+    margin: 0;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(181, 199, 201);
+}
+footer h5 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 35px;
 }
