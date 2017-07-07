@@ -384,14 +384,18 @@ footer .social .shape {
 footer .social .shape div {
     display: flex;
     flex-direction: column;
+    text-align: center;
 } 
+
+footer .social .shape a {
+    text-align: center;
+}
 
 footer .social .shape h3 {
     margin: 0;
     padding: 0 20px;
     font-weight: 700;
     font-size: 18px;
-    text-align: center;
 }
 
 footer .social .shape h4 {
@@ -400,7 +404,6 @@ footer .social .shape h4 {
     font-weight: 400;
     font-size: 14px;
     color: rgb(181, 199, 201);
-    text-align: center;
 }
 footer h5 {
     margin: 0;
@@ -487,6 +490,9 @@ footer h5 {
         line-height: 26px;
     }
     
+    footer .social .shape div {
+        text-align: left;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
