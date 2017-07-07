@@ -7,14 +7,16 @@ header {
    display: flex;
    flex-wrap: wrap;
    align-items: center;
-   padding: 2% 0;
+   padding: 5% 0;
+  
 }
-
+   
 header .logo {
     /*width: 170px;*/
     /*margin-left: 374px;*/
     font: 900 32px/26px  'Source Sans Pro';
     color: rgb(99, 127, 131);
+    text-align: center;
 }
 
 header nav {
@@ -87,7 +89,8 @@ section.banner h2 {
 }
 
 section.main-title {
-    height: 140px;
+    /*height: 140px;*/
+    padding: 3% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,15 +114,16 @@ section.main-title h2 {
 }
 
 section.featured-content {
-    padding: 4% 0;
     background-color: rgb(246, 246, 246);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 
 section.featured-content div {
     /*width: 270px;*/
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,6 +136,7 @@ section.featured-content div h3 {
     font-size: 23px;
     font-weight: 700;
     margin-bottom: 0;
+    text-align: center;
 }
 
 section.featured-content div p {
@@ -207,14 +212,14 @@ section.portfolio button {
     background-color: rgb(228, 85, 29);
     border-radius: 5px;
     border: 0;
-    margin: 40px 5px;
+    margin-top: 3%;
     font: 700 18px 'Source Sans Pro';
     letter-spacing: 0.002em;
     color: rgb(255, 255, 255);
 }
 
 section.row { 
-    margin: 45px auto;
+    margin: 3% auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -278,7 +283,6 @@ footer h2 {
     margin: 0;
     font-weight: 300;
     font-size: 24px;
-    padding-bottom: 40px;
     text-align: center;
 }
 
@@ -385,7 +389,8 @@ footer .social {
 footer .social .shape {
     display: flex;
     align-items: center;
-    margin: 0 130px;
+    justify-content: center;
+    flex-wrap: wrap;
 } 
 
 footer .social .shape div {
@@ -398,6 +403,7 @@ footer .social .shape h3 {
     padding: 0 20px;
     font-weight: 700;
     font-size: 18px;
+    text-align: center;
 }
 
 footer .social .shape h4 {
@@ -406,6 +412,7 @@ footer .social .shape h4 {
     font-weight: 400;
     font-size: 14px;
     color: rgb(181, 199, 201);
+    text-align: center;
 }
 footer h5 {
     margin: 0;
@@ -443,6 +450,11 @@ footer h5 {
     .xs-offset-11 {margin-left: 91.66%}
     .xs-offset-12 {margin-left: 100%}
     
+    
+
+    header nav a {
+        margin: 2% 0;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -471,6 +483,10 @@ footer h5 {
     .sm-offset-10 {margin-left: 83.33%}
     .sm-offset-11 {margin-left: 91.66%}
     .sm-offset-12 {margin-left: 100%}
+    
+    header {
+        padding: 2% 0;
+    }
     
 }
 
