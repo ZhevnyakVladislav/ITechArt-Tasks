@@ -4,29 +4,33 @@ body {
 }
 
 header {
-   height: 90px; 
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
+   padding: 2% 0;
 }
 
 header .logo {
-    width: 170px;
-    margin-left: 374px;
-    font: 900 32px/26px  'Source Sans Pro', black;
+    /*width: 170px;*/
+    /*margin-left: 374px;*/
+    font: 900 32px/26px  'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
 header nav {
-   margin-left: 400px;
-   width: 600px;
-   display: flex;
-   flex-direction: row;
+    /*margin-left: 400px;
+    width: 600px;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 header nav a {
     text-decoration: none;
     margin: auto;
     position: relative;
+    text-align: center;
 }
 
 header nav a .link .link-arrow {
@@ -35,7 +39,7 @@ header nav a .link .link-arrow {
     width: 20px;
     height: 20px;
     top:-20px;
-    left: 30%;
+    left: 40%;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9IjIzLjEsMzQuMSA1MS41LDYxLjcgODAsMzQuMSA4MS41LDM1IDUxLjUsNjQuMSAyMS41LDM1IDIzLjEsMzQuMSAiLz48L3N2Zz4=);
 }
 
@@ -53,16 +57,17 @@ header nav a .link:hover .link-text {
 }
 
 section.banner {
-    height: 520px;
+    padding: 7% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("./images/wallpaperwide.png");
+    background-size: cover;
 }
 
 section.banner h1 {
-    width: 470px;
+    /*width: 470px;*/
     font:  700 40px/52px 'PT Sans';
     color: white;
     text-decoration: underline;
@@ -72,7 +77,7 @@ section.banner h1 {
 }
 
 section.banner h2 {
-    width: 370px;
+    /*width: 370px;*/
     font:  400 16px/26px 'Lato';
     text-transform: uppercase;
     color: white;
@@ -95,16 +100,18 @@ section.main-title h1 {
     font-weight: 700;
     font-size: 34px;
     margin: 0;
+    text-align: center;
 }
 
 section.main-title h2 {
     font-weight: 300;
     font-size: 24px;
     margin: 0;
+    text-align: center;
 }
 
 section.featured-content {
-    padding: 60px;
+    padding: 4% 0;
     background-color: rgb(246, 246, 246);
     display: flex;
     justify-content: center;
@@ -112,7 +119,7 @@ section.featured-content {
 
 
 section.featured-content div {
-    width: 270px;
+    /*width: 270px;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,7 +156,8 @@ section.featured-content div button {
 }
 
 section.portfolio {
-    height: 520px;
+    /*height: 520px;*/
+    padding: 4% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -162,28 +170,30 @@ section.portfolio h1 {
     font-weight: 700;
     font-size: 34px;
     margin: 0;
+    text-align: center;
 }
 
 section.portfolio h2 {
     font-weight: 300;
     font-size: 24px;
     margin: 0;
+    text-align: center;
 }
 
 section.portfolio .controls {
-    width: 100%;
     display: flex;
     align-items: center;
 }
 
-section.portfolio .controls hr:first-child {
+section.portfolio .controls hr{
     width: 100%;
-    margin-left: 370px;
+}
+
+section.portfolio .controls hr:first-child {
     margin-right: 10px;
 }
+
 section.portfolio .controls hr:last-child {
-    width: 100%;
-    margin-right: 370px;
     margin-left: 10px;
 }
 
@@ -193,7 +203,6 @@ section.portfolio .controls img {
 
 
 section.portfolio button {
-    width: 150px;
     height: 40px;
     background-color: rgb(228, 85, 29);
     border-radius: 5px;
@@ -205,16 +214,14 @@ section.portfolio button {
 }
 
 section.row { 
-    width: 1170px;
     margin: 45px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 
 section.row .content {
-    width: 570px;
     display: flex;
     margin: 15px 0;
 }
@@ -264,6 +271,7 @@ footer h1 {
     margin: 0;
     font-weight: 700;
     font-size: 34px;
+    text-align: center;
 }
 
 footer h2 {
@@ -271,21 +279,23 @@ footer h2 {
     font-weight: 300;
     font-size: 24px;
     padding-bottom: 40px;
+    text-align: center;
 }
 
 footer .content {
-    width: 1170px;
+    /*width: 1170px;*/
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 45px;
 }
 
 footer .content .subscribe {
-    width: 570px;
+    /*width: 570px;*/
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 0;
 }
 
 footer .content .subscribe .description {
@@ -340,7 +350,7 @@ footer .content .subscribe .form button {
 }
 
 footer .twitter {
-    width: 570px;
+    /*width: 570px;*/
     display: flex;
     align-items: center;
     background-color: rgb(89, 114, 117);
@@ -403,4 +413,119 @@ footer h5 {
     font-size: 14px;
     line-height: 24px;
     padding-top: 35px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 300px) {
+    .xs-1 {width: 8.33%;}
+    .xs-2 {width: 16.66%;}
+    .xs-3 {width: 25%;}
+    .xs-4 {width: 33.33%;}
+    .xs-5 {width: 41.66%;}
+    .xs-6 {width: 50%;}
+    .xs-7 {width: 58.33%;}
+    .xs-8 {width: 66.66%;}
+    .xs-9 {width: 75%;}
+    .xs-10 {width: 83.33%;}
+    .xs-11 {width: 91.66%;}
+    .xs-12 {width: 100%; font-size: 20px;}
+
+    .xs-offset-1 {margin-left: 8.33%}
+    .xs-offset-2 {margin-left: 16.66%}
+    .xs-offset-3 {margin-left: 25%}
+    .xs-offset-4 {margin-left: 33.33%}
+    .xs-offset-5 {margin-left: 41.66%}
+    .xs-offset-6 {margin-left: 50%}
+    .xs-offset-7 {margin-left: 58.33%}
+    .xs-offset-8 {margin-left: 66.66%}
+    .xs-offset-9 {margin-left: 75%}
+    .xs-offset-10 {margin-left: 83.33%}
+    .xs-offset-11 {margin-left: 91.66%}
+    .xs-offset-12 {margin-left: 100%}
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .sm-1 {width: 8.33%;}
+    .sm-2 {width: 16.66%;}
+    .sm-3 {width: 25%;}
+    .sm-4 {width: 33.33%;}
+    .sm-5 {width: 41.66%;}
+    .sm-6 {width: 50%;}
+    .sm-7 {width: 58.33%;}
+    .sm-8 {width: 66.66%;}
+    .sm-9 {width: 75%;}
+    .sm-10 {width: 83.33%;}
+    .sm-11 {width: 91.66%;}
+    .sm-12 {width: 100%;}
+
+    .sm-offset-1 {margin-left: 8.33%}
+    .sm-offset-2 {margin-left: 16.66%}
+    .sm-offset-3 {margin-left: 25%}
+    .sm-offset-4 {margin-left: 33.33%}
+    .sm-offset-5 {margin-left: 41.66%}
+    .sm-offset-6 {margin-left: 50%}
+    .sm-offset-7 {margin-left: 58.33%}
+    .sm-offset-8 {margin-left: 66.66%}
+    .sm-offset-9 {margin-left: 75%}
+    .sm-offset-10 {margin-left: 83.33%}
+    .sm-offset-11 {margin-left: 91.66%}
+    .sm-offset-12 {margin-left: 100%}
+    
+}
+
+@media only screen and (min-width: 1280px) {
+    .md-1 {width: 8.33%;}
+    .md-2 {width: 16.66%;}
+    .md-3 {width: 25%;}
+    .md-4 {width: 33.33%;}
+    .md-5 {width: 41.66%;}
+    .md-6 {width: 50%;}
+    .md-7 {width: 58.33%;}
+    .md-8 {width: 66.66%;}
+    .md-9 {width: 75%;}
+    .md-10 {width: 83.33%;}
+    .md-11 {width: 91.66%;}
+    .md-12 {width: 100%;}
+
+    .md-offset-1 {margin-left: 8.33%}
+    .md-offset-2 {margin-left: 16.66%}
+    .md-offset-3 {margin-left: 25%}
+    .md-offset-4 {margin-left: 33.33%}
+    .md-offset-5 {margin-left: 41.66%}
+    .md-offset-6 {margin-left: 50%}
+    .md-offset-7 {margin-left: 58.33%}
+    .md-offset-8 {margin-left: 66.66%}
+    .md-offset-9 {margin-left: 75%}
+    .md-offset-10 {margin-left: 83.33%}
+    .md-offset-11 {margin-left: 91.66%}
+    .md-offset-12 {margin-left: 100%}
+}
+
+@media only screen and (min-width: 1600px) {
+    .lg-1 {width: 8.33%;}
+    .lg-2 {width: 16.66%;}
+    .lg-3 {width: 25%;}
+    .lg-4 {width: 33.33%;}
+    .lg-5 {width: 41.66%;}
+    .lg-6 {width: 50%;}
+    .lg-7 {width: 58.33%;}
+    .lg-8 {width: 66.66%;}
+    .lg-9 {width: 75%;}
+    .lg-10 {width: 83.33%;}
+    .lg-11 {width: 91.66%;}
+    .lg-12 {width: 100%;}
+
+    .lg-offset-1 {margin-left: 8.33%}
+    .lg-offset-2 {margin-left: 16.66%}
+    .lg-offset-3 {margin-left: 25%}
+    .lg-offset-4 {margin-left: 33.33%}
+    .lg-offset-5 {margin-left: 41.66%}
+    .lg-offset-6 {margin-left: 50%}
+    .lg-offset-7 {margin-left: 58.33%}
+    .lg-offset-8 {margin-left: 66.66%}
+    .lg-offset-9 {margin-left: 75%}
+    .lg-offset-10 {margin-left: 83.33%}
+    .lg-offset-11 {margin-left: 91.66%}
+    .lg-offset-12 {margin-left: 100%}
 }
