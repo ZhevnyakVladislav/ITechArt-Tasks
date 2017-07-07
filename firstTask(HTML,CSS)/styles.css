@@ -12,16 +12,12 @@ header {
 }
    
 header .logo {
-    /*width: 170px;*/
-    /*margin-left: 374px;*/
     font: 900 32px/26px  'Source Sans Pro';
     color: rgb(99, 127, 131);
     text-align: center;
 }
 
 header nav {
-    /*margin-left: 400px;
-    width: 600px;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -69,7 +65,6 @@ section.banner {
 }
 
 section.banner h1 {
-    /*width: 470px;*/
     font:  700 40px/52px 'PT Sans';
     color: white;
     text-decoration: underline;
@@ -79,7 +74,6 @@ section.banner h1 {
 }
 
 section.banner h2 {
-    /*width: 370px;*/
     font:  400 16px/26px 'Lato';
     text-transform: uppercase;
     color: white;
@@ -89,7 +83,6 @@ section.banner h2 {
 }
 
 section.main-title {
-    /*height: 140px;*/
     padding: 3% 0;
     display: flex;
     flex-direction: column;
@@ -161,7 +154,6 @@ section.featured-content div button {
 }
 
 section.portfolio {
-    /*height: 520px;*/
     padding: 4% 0;
     display: flex;
     flex-direction: column;
@@ -287,7 +279,6 @@ footer h2 {
 }
 
 footer .content {
-    /*width: 1170px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -296,7 +287,6 @@ footer .content {
 }
 
 footer .content .subscribe {
-    /*width: 570px;*/
     display: flex;
     flex-direction: column;
     padding: 30px 0;
@@ -325,12 +315,10 @@ footer .content .subscribe .description .title h4 {
 
 footer .content .subscribe .form {
     display:  flex;
-    width: 100%;
     padding: 30px 30px 0 0;
 }
 
 footer .content .subscribe .form input {
-    width: 100%;
     background-color: rgb(89, 114, 117);
     border: 0;
     margin-right: 10px;
@@ -340,7 +328,6 @@ footer .content .subscribe .form input {
 }
 
 footer .content .subscribe .form button {
-    width: 100px;
     height: 40px;
     background-color: rgb(89, 114, 117);
     border: 0;
@@ -354,7 +341,6 @@ footer .content .subscribe .form button {
 }
 
 footer .twitter {
-    /*width: 570px;*/
     display: flex;
     align-items: center;
     background-color: rgb(89, 114, 117);
@@ -376,11 +362,9 @@ footer .twitter p a {
 }
 
 footer .social {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     padding: 30px 0;
     color: rgb(99, 127, 131);
     background-color: rgb(255, 255, 255);
@@ -485,7 +469,7 @@ footer h5 {
     .sm-offset-12 {margin-left: 100%}
     
     header {
-        padding: 2% 0;
+        padding: 1% 0;
     }
     
 }
