@@ -31,7 +31,7 @@ header nav a {
     text-align: center;
 }
 
-header nav a .link .link-arrow {
+ .link .link-arrow {
     position: absolute;
     display: none;
     width: 20px;
@@ -41,20 +41,20 @@ header nav a .link .link-arrow {
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9IjIzLjEsMzQuMSA1MS41LDYxLjcgODAsMzQuMSA4MS41LDM1IDUxLjUsNjQuMSAyMS41LDM1IDIzLjEsMzQuMSAiLz48L3N2Zz4=);
 }
 
-header nav a .link .link-text {
+ .link .link-text {
     font: bold 16px 'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
-header nav a .link:hover .link-arrow {
+.link:hover .link-arrow {
     display: block;
 }
 
-header nav a .link:hover .link-text {
+.link:hover .link-text {
     color: rgb(228, 85, 29);
 }
 
-section.banner {
+.banner {
     padding: 7% 0;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ section.banner {
     background-size: cover;
 }
 
-section.banner h1 {
+.banner h1 {
     font:  700 25px/35px 'PT Sans';
     color: white;
     text-decoration: underline;
@@ -72,10 +72,12 @@ section.banner h1 {
     text-align: center;
     margin: 0;
 }
-section.banner a {
+
+.banner a {
     text-align: center;
 }
-section.banner h2 {
+
+.banner h2 {
     font:  400 10px/20px 'Lato';
     text-transform: uppercase;
     color: white;
@@ -84,7 +86,7 @@ section.banner h2 {
     margin: 30px 0;
 }
 
-section.main-title {
+.main-title {
     padding: 3% 0;
     display: flex;
     flex-direction: column;
@@ -94,21 +96,21 @@ section.main-title {
     font-family:'Source Sans Pro';
 }
 
-section.main-title h1 {
+.main-title h1 {
     font-weight: 700;
     font-size: 34px;
     margin: 0;
     text-align: center;
 }
 
-section.main-title h2 {
+.main-title h2 {
     font-weight: 300;
     font-size: 24px;
     margin: 0;
     text-align: center;
 }
 
-section.featured-content {
+.featured-content {
     background-color: rgb(246, 246, 246);
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +118,7 @@ section.featured-content {
 }
 
 
-section.featured-content div {
+.featured-content div {
     margin: 50px 0;
     display: flex;
     flex-direction: column;
@@ -126,14 +128,14 @@ section.featured-content div {
     color: rgb(99, 127, 131);
 }
 
-section.featured-content div h3 {
+.featured-content div h3 {
     font-size: 23px;
     font-weight: 700;
     margin-bottom: 0;
     text-align: center;
 }
 
-section.featured-content div p {
+.featured-content div p {
     width: 85%;
     font-weight: 400;
     font-size: 14px; 
@@ -141,7 +143,7 @@ section.featured-content div p {
     text-align: center;
 }
 
-section.featured-content div button {
+.featured-content div button {
     width: 70px;
     height: 30px;
     border: 0;
@@ -154,7 +156,7 @@ section.featured-content div button {
     text-align: center;
 }
 
-section.portfolio {
+.portfolio {
     padding: 4% 0;
     display: flex;
     flex-direction: column;
@@ -164,43 +166,43 @@ section.portfolio {
     font-family:'Source Sans Pro';
 }
 
-section.portfolio h1 {
+.portfolio h1 {
     font-weight: 700;
     font-size: 34px;
     margin: 0;
     text-align: center;
 }
 
-section.portfolio h2 {
+.portfolio h2 {
     font-weight: 300;
     font-size: 24px;
     margin: 0;
     text-align: center;
 }
 
-section.portfolio .controls {
+.portfolio .controls {
     display: flex;
     align-items: center;
 }
 
-section.portfolio .controls hr{
+.portfolio .controls hr{
     width: 100%;
 }
 
-section.portfolio .controls hr:first-child {
+.portfolio .controls hr:first-child {
     margin-right: 10px;
 }
 
-section.portfolio .controls hr:last-child {
+.portfolio .controls hr:last-child {
     margin-left: 10px;
 }
 
-section.portfolio .controls img {
+.portfolio .controls img {
     margin: 30px 5px ;
 }
 
 
-section.portfolio button {
+.portfolio button {
     min-height: 40px;
     background-color: rgb(228, 85, 29);
     border-radius: 5px;
@@ -211,7 +213,7 @@ section.portfolio button {
     color: rgb(255, 255, 255);
 }
 
-section.row { 
+.row { 
     margin: 3% auto;
     display: flex;
     flex-direction: row;
@@ -219,29 +221,29 @@ section.row {
     justify-content: center;
 }
 
-section.row .content {
+.row .content {
     display: flex;
     margin: 15px 0;
 }
 
-section.row .content img {
+.row .content img {
     width: 100px;
     height: 100px;
 }
 
-section.row .content .description {
+.row .content .description {
     padding: 0 30px;
     font-family: 'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
-section.row .content .description h1 {
+.description h1 {
     margin: 0;
     font-weight: 700;
     font-size: 22px;
 }
 
-section.row .content .description p {
+.description p {
     margin: 0;
     font-weight: 400;
     font-size: 14px;
@@ -249,7 +251,7 @@ section.row .content .description p {
     color:rgb(148,148,148)
 }
 
-section.row .content .description p a {
+.description p a {
     color:  rgb(228, 85, 29);
     cursor: pointer;
 }
@@ -293,33 +295,33 @@ footer .content .subscribe {
     padding: 30px 0;
 }
 
-footer .content .subscribe .description {
+.subscribe .description {
     display: flex;
     align-items: center;
 }
 
-footer .content .subscribe .description .title {
+.subscribe .description .title {
     padding: 0 20px;
 }
 
-footer .content .subscribe .description .title h3 {
+.subscribe .description .title h3 {
     margin: 0;
     font-weight: 700;
     font-size: 18px;
 }
 
-footer .content .subscribe .description .title h4 {
+.subscribe .description .title h4 {
     margin: 0;
     font-weight: 400;
     font-size: 14px;
 }
 
-footer .content .subscribe .form {
+.subscribe .form {
     display:  flex;
     padding: 30px 30px 0 0;
 }
 
-footer .content .subscribe .form input {
+.subscribe .form input {
     min-width: 200px;
     background-color: rgb(89, 114, 117);
     border: 0;
@@ -329,7 +331,7 @@ footer .content .subscribe .form input {
     padding: 0 20px;
 }
 
-footer .content .subscribe .form button {
+.subscribe .form button {
     min-height: 40px;
     width: 200px;
     background-color: rgb(89, 114, 117);
@@ -343,14 +345,14 @@ footer .content .subscribe .form button {
     color: rgb(255, 255, 255);
 }
 
-footer .twitter {
+.twitter {
     display: flex;
     align-items: center;
     background-color: rgb(89, 114, 117);
     padding: 20px 30px;
 }
 
-footer .twitter p {
+.twitter p {
     margin: 0;
     margin-left: 30px;
     font-weight: 400;
@@ -359,12 +361,12 @@ footer .twitter p {
     color:  rgb(181, 199, 201);
 }
 
-footer .twitter p a {
+.twitter p a {
     text-decoration: underline;
     color:  rgb(255, 255, 255);
 }
 
-footer .social {
+.social {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -374,31 +376,31 @@ footer .social {
     background-color: rgb(255, 255, 255);
 }
 
-footer .social .shape {
+.social .shape {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 } 
 
-footer .social .shape div {
+.social .shape div {
     display: flex;
     flex-direction: column;
     text-align: center;
 } 
 
-footer .social .shape a {
+.social .shape a {
     text-align: center;
 }
 
-footer .social .shape h3 {
+.social .shape h3 {
     margin: 0;
     padding: 0 20px;
     font-weight: 700;
     font-size: 18px;
 }
 
-footer .social .shape h4 {
+.social .shape h4 {
     margin: 0;
     padding: 0 20px;
     font-weight: 400;
