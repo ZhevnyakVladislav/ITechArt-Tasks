@@ -4,66 +4,68 @@ body {
 }
 
 header {
-   height: 90px; 
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
+   padding: 5% 0;
+  
 }
-
+   
 header .logo {
-    width: 170px;
-    margin-left: 374px;
-    font: 900 32px/26px  'Source Sans Pro', black;
+    font: 900 32px/26px  'Source Sans Pro';
     color: rgb(99, 127, 131);
+    text-align: center;
 }
 
 header nav {
-   margin-left: 400px;
-   width: 600px;
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 header nav a {
     text-decoration: none;
     margin: auto;
     position: relative;
+    text-align: center;
 }
 
-header nav a .link .link-arrow {
+ .link .link-arrow {
     position: absolute;
     display: none;
     width: 20px;
     height: 20px;
     top:-20px;
-    left: 30%;
+    left: 40%;
     background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwMCAxMDAiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBmaWxsPSIjMDEwMTAxIiBwb2ludHM9IjIzLjEsMzQuMSA1MS41LDYxLjcgODAsMzQuMSA4MS41LDM1IDUxLjUsNjQuMSAyMS41LDM1IDIzLjEsMzQuMSAiLz48L3N2Zz4=);
 }
 
-header nav a .link .link-text {
+ .link .link-text {
     font: bold 16px 'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
-header nav a .link:hover .link-arrow {
+.link:hover .link-arrow {
     display: block;
 }
 
-header nav a .link:hover .link-text {
+.link:hover .link-text {
     color: rgb(228, 85, 29);
 }
 
-section.banner {
-    height: 520px;
+.banner {
+    padding: 7% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url("./images/wallpaperwide.png");
+    background-size: cover;
 }
 
-section.banner h1 {
-    width: 470px;
-    font:  700 40px/52px 'PT Sans';
+.banner h1 {
+    font:  700 25px/35px 'PT Sans';
     color: white;
     text-decoration: underline;
     letter-spacing: 0.06em;
@@ -71,9 +73,12 @@ section.banner h1 {
     margin: 0;
 }
 
-section.banner h2 {
-    width: 370px;
-    font:  400 16px/26px 'Lato';
+.banner a {
+    text-align: center;
+}
+
+.banner h2 {
+    font:  400 10px/20px 'Lato';
     text-transform: uppercase;
     color: white;
     letter-spacing: 0.2em;
@@ -81,8 +86,8 @@ section.banner h2 {
     margin: 30px 0;
 }
 
-section.main-title {
-    height: 140px;
+.main-title {
+    padding: 3% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,28 +96,30 @@ section.main-title {
     font-family:'Source Sans Pro';
 }
 
-section.main-title h1 {
+.main-title h1 {
     font-weight: 700;
     font-size: 34px;
     margin: 0;
+    text-align: center;
 }
 
-section.main-title h2 {
+.main-title h2 {
     font-weight: 300;
     font-size: 24px;
     margin: 0;
+    text-align: center;
 }
 
-section.featured-content {
-    padding: 60px;
+.featured-content {
     background-color: rgb(246, 246, 246);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 
-section.featured-content div {
-    width: 270px;
+.featured-content div {
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,13 +128,14 @@ section.featured-content div {
     color: rgb(99, 127, 131);
 }
 
-section.featured-content div h3 {
+.featured-content div h3 {
     font-size: 23px;
     font-weight: 700;
     margin-bottom: 0;
+    text-align: center;
 }
 
-section.featured-content div p {
+.featured-content div p {
     width: 85%;
     font-weight: 400;
     font-size: 14px; 
@@ -135,7 +143,7 @@ section.featured-content div p {
     text-align: center;
 }
 
-section.featured-content div button {
+.featured-content div button {
     width: 70px;
     height: 30px;
     border: 0;
@@ -148,8 +156,8 @@ section.featured-content div button {
     text-align: center;
 }
 
-section.portfolio {
-    height: 520px;
+.portfolio {
+    padding: 4% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,85 +166,84 @@ section.portfolio {
     font-family:'Source Sans Pro';
 }
 
-section.portfolio h1 {
+.portfolio h1 {
     font-weight: 700;
     font-size: 34px;
     margin: 0;
+    text-align: center;
 }
 
-section.portfolio h2 {
+.portfolio h2 {
     font-weight: 300;
     font-size: 24px;
     margin: 0;
+    text-align: center;
 }
 
-section.portfolio .controls {
-    width: 100%;
+.portfolio .controls {
     display: flex;
     align-items: center;
 }
 
-section.portfolio .controls hr:first-child {
+.portfolio .controls hr{
     width: 100%;
-    margin-left: 370px;
+}
+
+.portfolio .controls hr:first-child {
     margin-right: 10px;
 }
-section.portfolio .controls hr:last-child {
-    width: 100%;
-    margin-right: 370px;
+
+.portfolio .controls hr:last-child {
     margin-left: 10px;
 }
 
-section.portfolio .controls img {
+.portfolio .controls img {
     margin: 30px 5px ;
 }
 
 
-section.portfolio button {
-    width: 150px;
-    height: 40px;
+.portfolio button {
+    min-height: 40px;
     background-color: rgb(228, 85, 29);
     border-radius: 5px;
     border: 0;
-    margin: 40px 5px;
+    margin-top: 3%;
     font: 700 18px 'Source Sans Pro';
     letter-spacing: 0.002em;
     color: rgb(255, 255, 255);
 }
 
-section.row { 
-    width: 1170px;
-    margin: 45px auto;
+.row { 
+    margin: 3% auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 
-section.row .content {
-    width: 570px;
+.row .content {
     display: flex;
     margin: 15px 0;
 }
 
-section.row .content img {
+.row .content img {
     width: 100px;
     height: 100px;
 }
 
-section.row .content .description {
+.row .content .description {
     padding: 0 30px;
     font-family: 'Source Sans Pro';
     color: rgb(99, 127, 131);
 }
 
-section.row .content .description h1 {
+.description h1 {
     margin: 0;
     font-weight: 700;
     font-size: 22px;
 }
 
-section.row .content .description p {
+.description p {
     margin: 0;
     font-weight: 400;
     font-size: 14px;
@@ -244,7 +251,7 @@ section.row .content .description p {
     color:rgb(148,148,148)
 }
 
-section.row .content .description p a {
+.description p a {
     color:  rgb(228, 85, 29);
     cursor: pointer;
 }
@@ -264,59 +271,58 @@ footer h1 {
     margin: 0;
     font-weight: 700;
     font-size: 34px;
+    text-align: center;
 }
 
 footer h2 {
     margin: 0;
     font-weight: 300;
     font-size: 24px;
-    padding-bottom: 40px;
+    text-align: center;
 }
 
 footer .content {
-    width: 1170px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 45px;
 }
 
 footer .content .subscribe {
-    width: 570px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 0;
 }
 
-footer .content .subscribe .description {
+.subscribe .description {
     display: flex;
     align-items: center;
 }
 
-footer .content .subscribe .description .title {
+.subscribe .description .title {
     padding: 0 20px;
 }
 
-footer .content .subscribe .description .title h3 {
+.subscribe .description .title h3 {
     margin: 0;
     font-weight: 700;
     font-size: 18px;
 }
 
-footer .content .subscribe .description .title h4 {
+.subscribe .description .title h4 {
     margin: 0;
     font-weight: 400;
     font-size: 14px;
 }
 
-footer .content .subscribe .form {
+.subscribe .form {
     display:  flex;
-    width: 100%;
     padding: 30px 30px 0 0;
 }
 
-footer .content .subscribe .form input {
-    width: 100%;
+.subscribe .form input {
+    min-width: 200px;
     background-color: rgb(89, 114, 117);
     border: 0;
     margin-right: 10px;
@@ -325,29 +331,28 @@ footer .content .subscribe .form input {
     padding: 0 20px;
 }
 
-footer .content .subscribe .form button {
-    width: 100px;
-    height: 40px;
+.subscribe .form button {
+    min-height: 40px;
+    width: 200px;
     background-color: rgb(89, 114, 117);
     border: 0;
     border-radius: 5px;
     font-weight: 900;
-    font-size: 18px;
+    font-size: 16px;
     font-family: inherit;
     line-height: 25.6px;
     letter-spacing: 0.002em;
     color: rgb(255, 255, 255);
 }
 
-footer .twitter {
-    width: 570px;
+.twitter {
     display: flex;
     align-items: center;
     background-color: rgb(89, 114, 117);
     padding: 20px 30px;
 }
 
-footer .twitter p {
+.twitter p {
     margin: 0;
     margin-left: 30px;
     font-weight: 400;
@@ -356,41 +361,46 @@ footer .twitter p {
     color:  rgb(181, 199, 201);
 }
 
-footer .twitter p a {
+.twitter p a {
     text-decoration: underline;
     color:  rgb(255, 255, 255);
 }
 
-footer .social {
-    width: 100%;
+.social {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 30px 0;
     color: rgb(99, 127, 131);
     background-color: rgb(255, 255, 255);
 }
 
-footer .social .shape {
+.social .shape {
     display: flex;
     align-items: center;
-    margin: 0 130px;
+    justify-content: center;
+    flex-wrap: wrap;
 } 
 
-footer .social .shape div {
+.social .shape div {
     display: flex;
     flex-direction: column;
+    text-align: center;
 } 
 
-footer .social .shape h3 {
+.social .shape a {
+    text-align: center;
+}
+
+.social .shape h3 {
     margin: 0;
     padding: 0 20px;
     font-weight: 700;
     font-size: 18px;
 }
 
-footer .social .shape h4 {
+.social .shape h4 {
     margin: 0;
     padding: 0 20px;
     font-weight: 400;
@@ -403,4 +413,142 @@ footer h5 {
     font-size: 14px;
     line-height: 24px;
     padding-top: 35px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 300px) {
+    .xs-1 {width: 8.33%;}
+    .xs-2 {width: 16.66%;}
+    .xs-3 {width: 25%;}
+    .xs-4 {width: 33.33%;}
+    .xs-5 {width: 41.66%;}
+    .xs-6 {width: 50%;}
+    .xs-7 {width: 58.33%;}
+    .xs-8 {width: 66.66%;}
+    .xs-9 {width: 75%;}
+    .xs-10 {width: 83.33%;}
+    .xs-11 {width: 91.66%;}
+    .xs-12 {width: 100%;}
+
+    .xs-offset-1 {margin-left: 8.33%}
+    .xs-offset-2 {margin-left: 16.66%}
+    .xs-offset-3 {margin-left: 25%}
+    .xs-offset-4 {margin-left: 33.33%}
+    .xs-offset-5 {margin-left: 41.66%}
+    .xs-offset-6 {margin-left: 50%}
+    .xs-offset-7 {margin-left: 58.33%}
+    .xs-offset-8 {margin-left: 66.66%}
+    .xs-offset-9 {margin-left: 75%}
+    .xs-offset-10 {margin-left: 83.33%}
+    .xs-offset-11 {margin-left: 91.66%}
+    .xs-offset-12 {margin-left: 100%}
+    
+
+    
+
+    header nav a {
+        margin: 2% 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .sm-1 {width: 8.33%;}
+    .sm-2 {width: 16.66%;}
+    .sm-3 {width: 25%;}
+    .sm-4 {width: 33.33%;}
+    .sm-5 {width: 41.66%;}
+    .sm-6 {width: 50%;}
+    .sm-7 {width: 58.33%;}
+    .sm-8 {width: 66.66%;}
+    .sm-9 {width: 75%;}
+    .sm-10 {width: 83.33%;}
+    .sm-11 {width: 91.66%;}
+    .sm-12 {width: 100%;}
+
+    .sm-offset-1 {margin-left: 8.33%}
+    .sm-offset-2 {margin-left: 16.66%}
+    .sm-offset-3 {margin-left: 25%}
+    .sm-offset-4 {margin-left: 33.33%}
+    .sm-offset-5 {margin-left: 41.66%}
+    .sm-offset-6 {margin-left: 50%}
+    .sm-offset-7 {margin-left: 58.33%}
+    .sm-offset-8 {margin-left: 66.66%}
+    .sm-offset-9 {margin-left: 75%}
+    .sm-offset-10 {margin-left: 83.33%}
+    .sm-offset-11 {margin-left: 91.66%}
+    .sm-offset-12 {margin-left: 100%}
+    
+    header {
+        padding: 1% 0;
+    }
+
+    section.banner h1 {
+        font-size: 42px;
+        line-height: 52px;
+    }
+
+    section.banner h2 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    footer .social .shape div {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .md-1 {width: 8.33%;}
+    .md-2 {width: 16.66%;}
+    .md-3 {width: 25%;}
+    .md-4 {width: 33.33%;}
+    .md-5 {width: 41.66%;}
+    .md-6 {width: 50%;}
+    .md-7 {width: 58.33%;}
+    .md-8 {width: 66.66%;}
+    .md-9 {width: 75%;}
+    .md-10 {width: 83.33%;}
+    .md-11 {width: 91.66%;}
+    .md-12 {width: 100%;}
+
+    .md-offset-1 {margin-left: 8.33%}
+    .md-offset-2 {margin-left: 16.66%}
+    .md-offset-3 {margin-left: 25%}
+    .md-offset-4 {margin-left: 33.33%}
+    .md-offset-5 {margin-left: 41.66%}
+    .md-offset-6 {margin-left: 50%}
+    .md-offset-7 {margin-left: 58.33%}
+    .md-offset-8 {margin-left: 66.66%}
+    .md-offset-9 {margin-left: 75%}
+    .md-offset-10 {margin-left: 83.33%}
+    .md-offset-11 {margin-left: 91.66%}
+    .md-offset-12 {margin-left: 100%}
+}
+
+@media only screen and (min-width: 1600px) {
+    .lg-1 {width: 8.33%;}
+    .lg-2 {width: 16.66%;}
+    .lg-3 {width: 25%;}
+    .lg-4 {width: 33.33%;}
+    .lg-5 {width: 41.66%;}
+    .lg-6 {width: 50%;}
+    .lg-7 {width: 58.33%;}
+    .lg-8 {width: 66.66%;}
+    .lg-9 {width: 75%;}
+    .lg-10 {width: 83.33%;}
+    .lg-11 {width: 91.66%;}
+    .lg-12 {width: 100%;}
+
+    .lg-offset-1 {margin-left: 8.33%}
+    .lg-offset-2 {margin-left: 16.66%}
+    .lg-offset-3 {margin-left: 25%}
+    .lg-offset-4 {margin-left: 33.33%}
+    .lg-offset-5 {margin-left: 41.66%}
+    .lg-offset-6 {margin-left: 50%}
+    .lg-offset-7 {margin-left: 58.33%}
+    .lg-offset-8 {margin-left: 66.66%}
+    .lg-offset-9 {margin-left: 75%}
+    .lg-offset-10 {margin-left: 83.33%}
+    .lg-offset-11 {margin-left: 91.66%}
+    .lg-offset-12 {margin-left: 100%}
 }
