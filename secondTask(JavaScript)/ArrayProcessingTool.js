@@ -1,6 +1,6 @@
 var ArrayProcessingTool = (function() {
     return {
-         getMaxSubSum: function (array) {
+         getMaxSubSum1: function (array) {
                  var maxSum = 0;
                  var sum = 0;
                  for (var i = 0; i < array.length; i++) {
@@ -12,6 +12,26 @@ var ArrayProcessingTool = (function() {
                      }
                  }
                  return  maxSum;
+         },
+
+         getMaxSubSum2: function (array) {
+            var maxSum = 0;
+            var sum = 0;  
+            for (var i = 0; i < array.length; i++) {
+                var subArr = [];
+                for (var j = 0; j < array.length - i; j++) {
+                    subArr.push(array.slice(i,j+i+1));
+                    var sum = subArr[subArr.length-1].reduce(function(sum,current) {
+                        return sum + current;
+                    },0);
+                    if (maxSum < sum) {
+                        maxSum = sum;
+                    } else if (sum < 0) {
+                        sum = 0;
+                    }
+                }
+            }
+            return maxSum;
          },
 
          getMin: function (array) {
