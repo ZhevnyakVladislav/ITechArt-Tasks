@@ -7,10 +7,6 @@ var  DateDisplayFormatter = (function() {
         return { day: day, month: month, year: year};
     }
 
-    function createDate(date) {
-        return date.day.concat('-', date.month,'-', date.year);
-    }
-
     function parseDateByReg(string,regular) {
         var year = string.substr(regular.indexOf('YYYY'),4);
         var month = string.substr(regular.indexOf('MM'),2);
@@ -23,9 +19,26 @@ var  DateDisplayFormatter = (function() {
         return tmp.toDateString().split(' ')[1];
     }
 
+    function createDate(date) {
+        return date.day.toString().concat('-', date.month,'-', date.year);
+    }
+
+    function createDateByTemplate(date, template) {
+        return template.replace(/YYYY/, date.year)
+            .replace(/DD/, date.day)
+            .replace(/MM/, date.month);
+
+    }
     return {
-        toNumber: function(string) {
-            return createDate(parseDate(string));
+        toNumber: function(value) {
+            if (typeof value == 'string') {
+                return createDate(parseDate(value));
+            } else {
+                var date = new Date(value);
+                date = {day: date.getDay(), month:date.getMonth(), year: date.getFullYear()};
+                date.month = getStringMonth(date);
+                return createDate(date);
+            }
         },
 
         toString: function(string) {
@@ -42,6 +55,25 @@ var  DateDisplayFormatter = (function() {
             var date = parseDateByReg(string,regular);
             date.month = getStringMonth(date);
             return createDate(date);
-        }
+        },
+
+        toNumberByTemplate: function(string,template, regular) {
+            if(regular) {
+                var date = parseDateByReg(string,regular);
+            } else {
+                date = parseDate(string);
+            }
+            return createDateByTemplate(date, template);
+        },
+        
+        toStringByTemplate: function(string,template, regular) {
+            if(regular) {
+                var date = parseDateByReg(string,regular);
+            } else {
+                date = parseDate(string);
+            }
+            date.month = getStringMonth(date);
+            return createDateByTemplate(date, template);
+        },
     }
 })();
