@@ -1,25 +1,32 @@
 var StringCalculator = (function() {
+    
+    function replace(value) {
+        if (typeof value == 'string') {
+            return Number(value.replace(/,/, '.'));
+        } 
+        return Number(value);
+    }
     return {
-        // REVIEW: Number(a.replace(/,/, '.')) надо бы сделать для этого отдельную функцию
+        
         addition: function(a, b) {
             console.log();
-            return Number(a.replace(/,/, '.')) + Number(b.replace(/,/, '.'));
+            return replace(a) + replace(b);
         },
 
         substraction: function(a, b) {
-            return Number(a.replace(/,/, '.')) - Number(b.replace(/,/, '.'));
+            return replace(a) - replace(a);
         },
 
         multiplication: function(a, b) {
-            return Number(a.replace(/,/, '.')) * Number(b.replace(/,/, '.'));
+            return replace(a) * replace(a);
         },
 
         division: function(a, b) {
-            return Number(a.replace(/,/, '.')) / Number(b.replace(/,/, '.'));
+            return replace(a) / replace(a);
         },
 
         equality: function(a, b) {
-            if (Number(a.replace(/,/, '.')) == Number(b.replace(/,/, '.'))) {
+            if (replace(a) == replace(a)) {
                 return true;
             }
             return false;
