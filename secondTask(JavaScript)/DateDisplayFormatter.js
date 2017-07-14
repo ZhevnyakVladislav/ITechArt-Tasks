@@ -1,5 +1,3 @@
-// REVIEW: нет метода 'fromNow'
-
 var  DateDisplayFormatter = (function() {
 
     function parseDate(string) {
@@ -77,5 +75,17 @@ var  DateDisplayFormatter = (function() {
             date.month = getStringMonth(date);
             return createDateByTemplate(date, template);
         },
+
+        fromNow(value) {
+            if (typeof value == 'string') { 
+                var date = parseDate(value);
+                date = new Date(date.year, date.month, date.day);
+            } else {
+                var date = new Date(value);
+            }
+            var now = new Date();
+            var fromNow = now.getFullYear() - date.getFullYear();
+            return fromNow > 0 ? fromNow + ' years ago': -fromNow + ' years ahead'
+        }
     }
 })();
