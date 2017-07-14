@@ -1,5 +1,6 @@
 var StringCalculator = (function() {
     return {
+        // REVIEW: Number(a.replace(/,/, '.')) надо бы сделать для этого отдельную функцию
         addition: function(a, b) {
             console.log();
             return Number(a.replace(/,/, '.')) + Number(b.replace(/,/, '.'));

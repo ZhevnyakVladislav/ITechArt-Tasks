@@ -20,6 +20,7 @@ var BinaryConverter = (function () {
             }
             return value;
         },
+        // REVIEW: не запилено
         from10To2: function (array) {
             
             var value = 0;

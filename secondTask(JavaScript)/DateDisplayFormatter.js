@@ -1,3 +1,5 @@
+// REVIEW: нет метода 'fromNow'
+
 var  DateDisplayFormatter = (function() {
 
     function parseDate(string) {

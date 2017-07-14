@@ -42,6 +42,7 @@
         return endOfText(string, rows, space, length);
     }
 
+    // REVIEW: length лишнее, ну или использовать его надо
     function onSentence(string, length, rows) {
         var element = '\n';
         var space = 0;
