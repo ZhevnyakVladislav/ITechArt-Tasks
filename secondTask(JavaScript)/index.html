@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+      mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script>
+      var assert = chai.assert;
+    </script>
   </head>
   <body>
     <script src="ArrayProcessingTool.js"></script>
@@ -11,5 +20,10 @@
     <script src="DateDisplayFormatter.js"></script>
     <script src="BinaryConverter.js"></script>
     <script src="CachingCalculator.js"></script>
+    <script src="StringCalculatorTest.js"></script>
+    <div id="mocha"></div>
+    <script>
+      mocha.run();
+    </script>
   </body>
 </html>
