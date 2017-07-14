@@ -14,19 +14,19 @@ var StringCalculator = (function() {
         },
 
         substraction: function(a, b) {
-            return replace(a) - replace(a);
+            return replace(a) - replace(b);
         },
 
         multiplication: function(a, b) {
-            return replace(a) * replace(a);
+            return replace(a) * replace(b);
         },
 
         division: function(a, b) {
-            return replace(a) / replace(a);
+            return replace(a) / replace(b);
         },
 
         equality: function(a, b) {
-            if (replace(a) == replace(a)) {
+            if (replace(a) == replace(b)) {
                 return true;
             }
             return false;
