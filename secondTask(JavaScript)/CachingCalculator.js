@@ -1,24 +1,22 @@
 (function() {
 
-    // REVIEW: сохраняется только предыдущий результат
-    // если сделать
-    // add(1,2)
-    // add(2,3)
-    // add(1,2) -- берется не из кеша
-    //
-
     function CachingCalculator(func) {
-        var lastA, lastB, value;
+        var lastA, lastB;
+        var cache = [];
         return function(a, b) {
-            if(a==lastA && b == lastB)
-            {
-                console.log('cache');
-                return CachingCalculator.cache;
+            var value = cache.find(function(obj) {
+                if(obj.firstVar == a && obj.secondVar == b) {
+                    return obj.value;
+                }
+            });
+            if (value) {
+                return value;
             }
-            CachingCalculator.cache = func(a,b);
+            value = func(a,b);
+            cache.push({ firstVar: a, secondVar:b, value: value});
             lastA = a;
             lastB = b;
-            return CachingCalculator.cache;
+            return value;
         };
     }
 
