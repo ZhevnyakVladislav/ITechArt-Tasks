@@ -46,11 +46,7 @@ var BinaryConverter = (function () {
             }
             return value;
         },
-<<<<<<< c55dc3f260162c517471f86f1154a649b642120b
-        // REVIEW: не запилено
-=======
         
->>>>>>> a276d31c92d14110d04d748f93f9bdda495a4097
         from10To2: function (array) {
             var numberArr = [];
             value = [0];
