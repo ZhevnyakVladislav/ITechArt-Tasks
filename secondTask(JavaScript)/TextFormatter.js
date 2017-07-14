@@ -42,8 +42,7 @@
         return endOfText(string, rows, space, length);
     }
 
-    // REVIEW: length лишнее, ну или использовать его надо
-    function onSentence(string, length, rows) {
+    function onSentence(string, rows) {
         var element = '\n';
         var space = 0;
         var i = 1;
@@ -84,7 +83,7 @@
         switch(type) {
             case 'onWord': { return onWord(string, length, rows)};
             case 'onSymbol': { return onSymbol(string, length, rows)};
-            case 'onSentence': { return onSentence(string, length, rows)};
+            case 'onSentence': { return onSentence(string, rows)};
             case 'none': { return string};
             
         }
