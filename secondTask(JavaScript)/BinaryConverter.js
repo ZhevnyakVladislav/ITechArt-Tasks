@@ -1,13 +1,39 @@
 var BinaryConverter = (function () {
 
     
-    function toSystem(value, system) {
-        var a = 1;
-        while(a > 1) {
-            a = value % system;
-            if (a = 1);
+    function to2System(number) {
+        var array = [];
+        value = number;
+        do {
+            a = value / 2;
+            value = parseInt(a);
+            array.push( a == value ? 0 : 1);
+        } while(a >= 2)
+        array.push(Math.floor(a));
+        return array;
+    }
 
+    function binaryArrSum(a, b) {
+        var length = a.length > b.length ? a.length : b.length;
+        var value = [];
+        var add = 0;
+        for (var  i = 0; i < length; i++) {
+            a[i] = isNaN(a[i]) ? 0 : a[i];
+            b[i] = isNaN(b[i]) ? 0 : b[i];
+            var curr = a[i] + b[i] + add;
+            if (curr == 2) {
+                value.push(0);
+                var add = 1;
+            } else if (curr == 3) {
+                value.push(1);
+                add = 1;
+            } else {
+                value.push(curr);
+                add = 0;
+            }
         }
+        value.push(add);
+        return value;
     }
 
     return {
@@ -20,14 +46,18 @@ var BinaryConverter = (function () {
             }
             return value;
         },
+<<<<<<< c55dc3f260162c517471f86f1154a649b642120b
         // REVIEW: не запилено
+=======
+        
+>>>>>>> a276d31c92d14110d04d748f93f9bdda495a4097
         from10To2: function (array) {
-            
-            var value = 0;
-
-            console.log(15/2);
-            
-            return true;
+            var numberArr = [];
+            value = [0];
+            for (var i = 0; i < array.length; i++) {
+                value = binaryArrSum(value, to2System(array[i] * Math.pow(10,i)));
+            }
+            return parseInt(value.reverse().join(''));
         }
     }    
 })();
