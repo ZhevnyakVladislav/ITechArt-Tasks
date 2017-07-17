@@ -1,10 +1,13 @@
+// REVIEW: оно работает, но можно сделать гораздо проще, причем не важно в систему с каким основанием переводить
+
 var BinaryConverter = (function () {
 
-    
+
     function to2System(number) {
         var array = [];
         value = number;
         do {
+            // REVIEW: var надо
             a = value / 2;
             value = parseInt(a);
             array.push( a == value ? 0 : 1);
@@ -23,6 +26,7 @@ var BinaryConverter = (function () {
             var curr = a[i] + b[i] + add;
             if (curr == 2) {
                 value.push(0);
+                // REVIEW: var не надо
                 var add = 1;
             } else if (curr == 3) {
                 value.push(1);
@@ -49,6 +53,7 @@ var BinaryConverter = (function () {
         
         from10To2: function (array) {
             var numberArr = [];
+            // REVIEW: var надо
             value = [0];
             for (var i = 0; i < array.length; i++) {
                 value = binaryArrSum(value, to2System(array[i] * Math.pow(10,i)));
