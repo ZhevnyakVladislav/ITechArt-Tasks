@@ -10,8 +10,9 @@ var BinaryConverter = (function () {
     
     function convertToEnd(value, to) {
         var array = [];
-        while( value > to ) {
+        while( value >= to ) {
             var a = value % to;
+            console.log(a);
             array.push(a);
             value = Math.floor(value / to);
         }
