@@ -76,8 +76,7 @@ var  DateDisplayFormatter = (function() {
             return createDateByTemplate(date, template);
         },
 
-        // REVIEW: это es6
-        fromNow(value) {
+        fromNow: function(value) {
             if (typeof value == 'string') { 
                 var date = parseDate(value);
                 date = new Date(date.year, date.month, date.day);
