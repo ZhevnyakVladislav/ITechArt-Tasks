@@ -1,26 +1,21 @@
 (function() {
 
     function CachingCalculator(func) {
-        var lastA, lastB;
         var cache = [];
         return function(a, b) {
             var value = cache.find(function(obj) {
                 if(obj.firstVar == a && obj.secondVar == b) {
-                    return obj.value;
+                    return obj;
                 }
             });
             if (value) {
-                return value;
+                return value.value;
             }
-            value = func(a,b);
+            value =  func(a,b);
             cache.push({ firstVar: a, secondVar:b, value: value});
-            lastA = a;
-            lastB = b;
             return value;
         };
     }
-
-
     window.CachingCalculator = CachingCalculator;
 
 })();
