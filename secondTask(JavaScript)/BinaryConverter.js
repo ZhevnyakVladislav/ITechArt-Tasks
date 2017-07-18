@@ -12,7 +12,6 @@ var BinaryConverter = (function () {
         var array = [];
         while( value >= to ) {
             var a = value % to;
-            console.log(a);
             array.push(a);
             value = Math.floor(value / to);
         }
