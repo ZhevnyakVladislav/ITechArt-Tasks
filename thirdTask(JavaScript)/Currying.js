@@ -1,14 +1,12 @@
 (function(){
     function Currying(func) {
         var args = [];
-        return function inner (a) {
-            if(a) {
-                args.push(a);
-                return inner;
-            } 
-            var params = args;
-            args = [];
-            return func.apply(this, params);
+        return function inner(a) {
+            args.push(a);
+            if(args.length == func.length) {
+                return func.apply(this, args.splice(0,args.length));
+            }
+            return inner;
         }
     }
 
