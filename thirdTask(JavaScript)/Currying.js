@@ -1,14 +1,17 @@
 (function(){
     function Currying(func) {
-        var args = [];
-        return function inner(a) {
+        return function (a) {
+            var args = [];
             args.push(a);
-            if(args.length == func.length) {
-                return func.apply(this, args.splice(0,args.length));
+            var inner = function (b) {
+                args.push(b);
+                if(args.length == func.length) {
+                    return func.apply(this, args.splice(0,args.length));
+                }
+                return inner;
             }
             return inner;
         }
     }
-
     window.Currying = Currying;
 })();
