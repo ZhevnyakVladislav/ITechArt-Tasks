@@ -10,7 +10,12 @@ describe("CachingCalculator", function() {
 			var cachefunc = CachingCalculator(spy); 
 			cachefunc(2,3); 
 			cachefunc(2,3); 
-			chai.expect(spy).to.have.been.called.once(); 
+			cachefunc(3,4);
+			cachefunc(3,4);
+			cachefunc(5,6);
+			cachefunc(5,6);
+			cachefunc(2,3); 
+			chai.expect(spy).to.have.been.called.exactly(3); 
 		}); 
 	}); 
 });
