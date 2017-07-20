@@ -17,13 +17,9 @@
 
     function sumOfTenRandom(a,b) {
         var array = getRandomArray(10, a, b)
-        var sum = 0;
-        var length = 0;
-        array.myMap(function(element) {
-            sum += element;
-            length++;
+        return linearFold(array,function(x,y) {
+            return x + y;
         });
-       return sum / length;;
     }
     window.sumOfTenRandom = sumOfTenRandom;
 })();
