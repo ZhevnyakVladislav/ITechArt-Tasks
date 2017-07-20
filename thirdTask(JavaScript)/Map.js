@@ -5,10 +5,7 @@
         }
         var newArray = [];
         for (var i = 0; i < this.length; i++) {
-            var element = func(this[i], i, this);
-            if(element) {
-                newArray.push(element);
-            }
+            newArray.push(func(this[i], i, this));
         }
         return newArray;
     }
