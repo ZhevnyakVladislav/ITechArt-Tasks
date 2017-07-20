@@ -1,13 +1,9 @@
 ;(function() {
     function averageOfEven(array) {
-        var value = 0;
-        var length = 0;
-        array.myFilter(function(element) { return element % 2 == 0;})
-            .myMap(function(element) { 
-            value+= element;
-            length++;
-        });
-        return value / length;
+        array = array.myFilter(function(element) { return element % 2 == 0;});
+        return linearFold(array, function(a,b) {
+            return (a + b);
+        }) / array.length;
     };
     window.averageOfEven = averageOfEven;
 })();
