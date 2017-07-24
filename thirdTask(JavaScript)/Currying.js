@@ -1,4 +1,5 @@
 (function(){
+    // wrong
     function Currying(func) {
         return function (a) {
             var args = [];

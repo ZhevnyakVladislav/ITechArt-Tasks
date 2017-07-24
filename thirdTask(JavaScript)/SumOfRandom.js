@@ -8,6 +8,7 @@
     };
     
     function getRandomArray(count, a, b) {
+        // use your unfold function
         var array = [];
         for (var i = 0; i < count; i++) {
             array.push(generateRandom(a,b));

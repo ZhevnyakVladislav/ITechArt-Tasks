@@ -5,6 +5,7 @@
         } 
         var previousValue = initialVlue;
         var start = 0;
+        // what if initial value is 0, '' or null? just check if it's undefined
          if(!initialVlue) {
             start = 1;
             previousValue = array[0];
