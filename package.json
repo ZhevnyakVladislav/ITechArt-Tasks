@@ -1,0 +1,30 @@
+{
+  "name": "ITechArt-Tasks",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "eslint": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ZhevnyakVladislav/ITechArt-Tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhevnyakVladislav/ITechArt-Tasks/issues"
+  },
+  "homepage": "https://github.com/ZhevnyakVladislav/ITechArt-Tasks#readme",
+  "description": ""
+}
