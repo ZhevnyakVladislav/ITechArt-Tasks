@@ -8,12 +8,11 @@
     };
     
     function getRandomArray(count, a, b) {
-        // use your unfold function
-        var array = [];
-        for (var i = 0; i < count; i++) {
-            array.push(generateRandom(a,b));
-        }
-        return array;
+        return linearUnfold(function(length) {
+             for (var i = 0; i < length; i++) {
+                 return [generateRandom(a,b), i];
+             }
+        }, count);
     }
 
     function sumOfTenRandom(a,b) {

@@ -5,8 +5,7 @@
         }
         for (var i = 0; i < this.length; i++) {
             if(funct(this[i], i, this)) {
-                // just return this[i]
-                return { obj: this[i], index: i };
+                return this[i];
             }
         }
     }
