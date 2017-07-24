@@ -1,18 +1,18 @@
-(function(){
-    // wrong
-    function Currying(func) {
-        return function (a) {
-            var args = [];
-            args.push(a);
-            var inner = function (b) {
-                args.push(b);
-                if(args.length == func.length) {
-                    return func.apply(this, args.splice(0,args.length));
-                }
-                return inner;
+(function () {
+    function buildNext(func, argsCount, args) {
+        return function(nextArg) {
+            var newArgs = args.concat([nextArg]);
+            if (newArgs.length == argsCount) {
+                return func.apply(this, newArgs);
+            } else {
+                return buildNext(func, argsCount, newArgs);
             }
-            return inner;
         }
     }
-    window.Currying = Currying;
+
+    function currying(func) {
+        var argsCount = func.length;
+        return buildNext(func, argsCount, []);
+    }
+    window.currying = currying;
 })();
