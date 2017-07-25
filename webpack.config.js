@@ -15,12 +15,16 @@ const webpackConfig = {
                 exclude: /node_modules/,
                 include: path.join(__dirname, './fourthTask(es+babel)'),
                 use: ['babel-loader']
+            },{
+                test:    /\.js$/,
+                exclude: /node_modules/,
+                loader: 'jscs-loader'
             }
         ]
     },
     plugins: [
         new BellOnBundlerErrorPlugin()
-    ]
+    ],
 };
 
 module.exports = webpackConfig;
