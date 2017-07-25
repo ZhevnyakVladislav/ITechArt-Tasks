@@ -7,6 +7,7 @@ const webpackConfig = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './fourthTask(es+babel)/dist')
     },
+    watch: true,
     module: {
         rules: [
             {

@@ -70,11 +70,11 @@
 "use strict";
 
 
-var _BinaryConverter = __webpack_require__(5);
+var _BinaryConverter = __webpack_require__(1);
 
 var _BinaryConverter2 = _interopRequireDefault(_BinaryConverter);
 
-var _CachingCalculator = __webpack_require__(4);
+var _CachingCalculator = __webpack_require__(2);
 
 var _CachingCalculator2 = _interopRequireDefault(_CachingCalculator);
 
@@ -82,11 +82,11 @@ var _PartialApplication = __webpack_require__(3);
 
 var _PartialApplication2 = _interopRequireDefault(_PartialApplication);
 
-var _LazyEvaluation = __webpack_require__(1);
+var _LazyEvaluation = __webpack_require__(4);
 
 var _LazyEvaluation2 = _interopRequireDefault(_LazyEvaluation);
 
-var _LinearFold = __webpack_require__(2);
+var _LinearFold = __webpack_require__(5);
 
 var _LinearFold2 = _interopRequireDefault(_LinearFold);
 
@@ -102,103 +102,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = lazyEvaluation;
-function lazyEvaluation(funct) {
-    var _this = this;
-
-    var params = Array.prototype.slice.call(arguments, 1);
-    return function () {
-        return funct.apply(_this, params);
-    };
-}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = linearFold;
-function linearFold(array, funct, initialVlue) {
-    if (Array.isArray(array) && typeof funct != "function") {
-        throw 'error parameters';
-    }
-    var previousValue = initialVlue;
-    var start = 0;
-    if (initialVlue == undefined) {
-        start = 1;
-        previousValue = array[0];
-    }
-    for (var i = start; i < array.length; i++) {
-        previousValue = funct(previousValue, array[i], i, array);
-    }
-    return previousValue;
-}
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = partialApplication;
-function partialApplication() {
-    var _arguments = arguments;
-
-    var context = this;
-    var params = Array.prototype.slice.call(arguments);
-    var funct = params.pop();
-    return function () {
-        var childParams = Array.prototype.slice.call(_arguments);
-        var newParams = params.concat(childParams);
-        return funct.apply(context, newParams);
-    };
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = cachingCalculator;
-function cachingCalculator(fucnt) {
-    var cache = [];
-    return function (a, b) {
-        var value = cache.find(function (obj) {
-            return obj.firstVar == a && obj.secondVar == b;
-        });
-        if (value) {
-            return value.value;
-        };
-        value = fucnt(a, b);
-        cache.push({ firstVar: a, secondVar: b, value: value });
-        return value;
-    };
-}
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -247,6 +150,103 @@ var BinaryConverter = function () {
 }();
 
 exports.default = BinaryConverter;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = cachingCalculator;
+function cachingCalculator(fucnt) {
+    var cache = [];
+    return function (a, b) {
+        var value = cache.find(function (obj) {
+            return obj.firstVar == a && obj.secondVar == b;
+        });
+        if (value) {
+            return value.value;
+        };
+        value = fucnt(a, b);
+        cache.push({ firstVar: a, secondVar: b, value: value });
+        return value;
+    };
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = partialApplication;
+function partialApplication() {
+    var _arguments = arguments;
+
+    var context = this;
+    var params = Array.prototype.slice.call(arguments);
+    var funct = params.pop();
+    return function () {
+        var childParams = Array.prototype.slice.call(_arguments);
+        var newParams = params.concat(childParams);
+        return funct.apply(context, newParams);
+    };
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = lazyEvaluation;
+function lazyEvaluation(funct) {
+    var _this = this;
+
+    var params = Array.prototype.slice.call(arguments, 1);
+    return function () {
+        return funct.apply(_this, params);
+    };
+}
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = linearFold;
+function linearFold(array, funct, initialVlue) {
+    if (Array.isArray(array) && typeof funct != "function") {
+        throw 'error parameters';
+    }
+    var previousValue = initialVlue;
+    var start = 0;
+    if (initialVlue == undefined) {
+        start = 1;
+        previousValue = array[0];
+    }
+    for (var i = start; i < array.length; i++) {
+        previousValue = funct(previousValue, array[i], i, array);
+    }
+    return previousValue;
+}
 
 /***/ })
 /******/ ]);
