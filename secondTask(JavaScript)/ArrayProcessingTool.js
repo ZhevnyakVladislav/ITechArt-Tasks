@@ -47,6 +47,7 @@ var ArrayProcessingTool = (function () {
 
         getMedium: function (array) {
             array.sort(function (a, b) { return a - b; });
+
             var index = parseInt(array.length / 2);
             if (array.length % 2 == 0)
             {
