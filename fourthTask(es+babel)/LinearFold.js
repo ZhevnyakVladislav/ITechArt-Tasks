@@ -1,3 +1,4 @@
+// typo 'initialVAlue'
 export default function linearFold(array, funct, initialVlue) {
   if (Array.isArray(array) && typeof funct != 'function') {
     throw 'error parameters';
@@ -5,6 +6,7 @@ export default function linearFold(array, funct, initialVlue) {
 
   let previousValue = initialVlue;
   let start = 0;
+  // use === to let it work with null initial value
   if (initialVlue == undefined) {
     start = 1;
     previousValue = array[0];

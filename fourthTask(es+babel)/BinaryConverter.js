@@ -1,5 +1,7 @@
+// no need to use class here
 export default class BinaryConverter {
   constructor() {
+    // use standard paddings
     const convertToNumber = (value, from) => {
             let result = 0;
             for (let i = 0; i < value.length; i++) {
@@ -10,6 +12,7 @@ export default class BinaryConverter {
           };
 
     const convertToEnd = (value, to) => {
+            // I prefer to use 'const' instead of 'let' if we don't reassign variable
             let array = [];
             while (value >= to) {
               let a = value % to;
@@ -24,6 +27,7 @@ export default class BinaryConverter {
   }
 
   convert(value, from, to) {
+    // it will not work, you don't define convertToEnd and convertToNumber as class methods
     return this.convertToEnd(this.convertToNumber(value, from), to);
   };
 }

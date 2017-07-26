@@ -1,3 +1,6 @@
+// ignore it in git, everybody can build this bundle locally
+
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
