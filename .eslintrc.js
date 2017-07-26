@@ -1,26 +1,26 @@
 module.exports = {
     env: {
-        browser: true,
-      },
+        browser: true
+    },
     extends: {
-        eslint: recommended,
-      },
+        eslint: recommended
+    },
     rule: {
-            indent: [
+        indent: [
             error,
-            spaces,
+            spaces
         ],
-            'linebreak-style': [
+        'linebreak-style': [
             error,
-            windows,
+            windows
         ],
-            quotes: [
+        quotes: [
             error,
-            single,
+            single
         ],
-            semi: [
+        semi: [
             error,
-            always,
-        ],
-          },
-  };
+            always
+        ]
+    }
+};
