@@ -2,10 +2,13 @@ var path = require('path');
 var BellOnBundlerErrorPlugin = require('bell-on-bundler-error-plugin');
 
 const webpackConfig = {
-    entry: './fourthTask(es+babel)/index.js',
+    entry: {
+      fourth: './fourthTask(es+babel)/index.js',
+      fifth: './fifthTask(deepJS)/index.js',
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './fourthTask(es+babel)/dist'),
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, './dist'),
       },
     watch: true,
     module: {
