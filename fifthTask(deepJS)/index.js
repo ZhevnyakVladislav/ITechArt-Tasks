@@ -1,3 +1,4 @@
+// you can import individual functions with curvy brackets
 import MyPromise from './Promise';
 
 (function () {

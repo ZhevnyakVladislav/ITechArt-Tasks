@@ -26,6 +26,7 @@ const setValue = (key, value, callback) => {
 
 const setAsync = (key, value) => new Promise(function (resolve, reject) {
     setValue(key, value, function () {
+      // don't pass anything
       return resolve('The value is set');
     });
   });
