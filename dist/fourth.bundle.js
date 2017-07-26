@@ -97,7 +97,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     window.linearFold = _LinearFold2.default;
     window.partialApplication = _PartialApplication2.default;
     window.cachingCalculator = _CachingCalculator2.default;
-    window.BinaryConverter = _BinaryConverter2.default;
+    window.binaryConverter = _BinaryConverter2.default;
 })();
 
 /***/ }),
@@ -108,54 +108,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-// no need to use class here
-var BinaryConverter = function () {
-  function BinaryConverter() {
-    _classCallCheck(this, BinaryConverter);
-
-    // use standard paddings
-    var convertToNumber = function convertToNumber(value, from) {
-      var result = 0;
-      for (var i = 0; i < value.length; i++) {
+exports.default = convert;
+var convertToNumber = function convertToNumber(value, from) {
+    var result = 0;
+    for (var i = 0; i < value.length; i++) {
         result += value[i] * Math.pow(from, i);
-      }
+    }
+    return result;
+};
 
-      return result;
-    };
-
-    var convertToEnd = function convertToEnd(value, to) {
-      // I prefer to use 'const' instead of 'let' if we don't reassign variable
-      var array = [];
-      while (value >= to) {
+var convertToEnd = function convertToEnd(value, to) {
+    var array = [];
+    while (value >= to) {
         var a = value % to;
         array.push(a);
         value = Math.floor(value / to);
-      }
-
-      array.push(value);
-      return array;
-    };
-  }
-
-  _createClass(BinaryConverter, [{
-    key: "convert",
-    value: function convert(value, from, to) {
-      // it will not work, you don't define convertToEnd and convertToNumber as class methods
-      return this.convertToEnd(this.convertToNumber(value, from), to);
     }
-  }]);
 
-  return BinaryConverter;
-}();
+    array.push(value);
+    return array;
+};
 
-exports.default = BinaryConverter;
+function convert(value, from, to) {
+    return convertToEnd(convertToNumber(value, from), to);
+};
 
 /***/ }),
 /* 2 */
@@ -165,25 +143,22 @@ exports.default = BinaryConverter;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = cachingCalculator;
 function cachingCalculator(fucnt) {
-  // const
-  var cache = [];
-  // use standard paddings
-  return function (a, b) {
-    var value = cache.find(function (obj) {
-      return obj.firstVar == a && obj.secondVar == b;
-    });
-    if (value) {
-      return value.value;
+    var cache = [];
+    return function (a, b) {
+        var value = cache.find(function (obj) {
+            return obj.firstVar == a && obj.secondVar == b;
+        });
+        if (value) {
+            return value.value;
+        };
+        value = fucnt(a, b);
+        cache.push({ firstVar: a, secondVar: b, value: value });
+        return value;
     };
-
-    value = fucnt(a, b);
-    cache.push({ firstVar: a, secondVar: b, value: value });
-    return value;
-  };
 }
 
 /***/ }),
@@ -194,24 +169,22 @@ function cachingCalculator(fucnt) {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = partialApplication;
 function partialApplication() {
-  var _arguments = arguments;
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+    }
 
-  // you don't need to save context, arrow functions do all the work for you
-  var _this = this;
-  // can be done with spread operator
-  var params = Array.prototype.slice.call(arguments);
-  var funct = params.pop();
-  // paddings
-  return function () {
-    // can be done with spread operator, it will be more explicit
-    var childParams = Array.prototype.slice.call(_arguments);
-    var newParams = params.concat(childParams);
-    return funct.apply(_this, newParams);
-  };
+    var funct = args.pop();
+    return function () {
+        for (var _len2 = arguments.length, childArgs = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+            childArgs[_key2] = arguments[_key2];
+        }
+
+        return funct.apply(null, [].concat(args, childArgs));
+    };
 }
 
 /***/ }),
@@ -222,17 +195,19 @@ function partialApplication() {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = lazyEvaluation;
 function lazyEvaluation(funct) {
-  var _this = this;
+    var _this = this;
 
-  // this can be done with spread operator
-  var params = Array.prototype.slice.call(arguments, 1);
-  return function () {
-    return funct.apply(_this, params);
-  };
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        args[_key - 1] = arguments[_key];
+    }
+
+    return function () {
+        return funct.apply(_this, args);
+    };
 }
 
 /***/ }),
@@ -243,28 +218,23 @@ function lazyEvaluation(funct) {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.default = linearFold;
-// typo 'initialVAlue'
-function linearFold(array, funct, initialVlue) {
-  if (Array.isArray(array) && typeof funct != 'function') {
-    throw 'error parameters';
-  }
-
-  var previousValue = initialVlue;
-  var start = 0;
-  // use === to let it work with null initial value
-  if (initialVlue == undefined) {
-    start = 1;
-    previousValue = array[0];
-  }
-
-  for (var i = start; i < array.length; i++) {
-    previousValue = funct(previousValue, array[i], i, array);
-  }
-
-  return previousValue;
+function linearFold(array, funct, initialValue) {
+    if (Array.isArray(array) && typeof funct != 'function') {
+        throw 'error parameters';
+    }
+    var previousValue = initialValue;
+    var start = 0;
+    if (initialVlue === undefined) {
+        start = 1;
+        previousValue = array[0];
+    }
+    for (var i = start; i < array.length; i++) {
+        previousValue = funct(previousValue, array[i], i, array);
+    }
+    return previousValue;
 }
 
 /***/ })
