@@ -47,3 +47,11 @@ export function getAsyncFew(key) {
         .then(() => getAsync(key))
         .then(() => getAsync(key));
 }
+
+export async function getAsyncAwait(key) {
+    const first = await getAsync(key);
+    const second = await getAsync(key);
+    const third = await getAsync(key);
+    const fourth = await getAsync(key);
+    const firth = await getAsync(key);
+}
