@@ -3,13 +3,13 @@ var BellOnBundlerErrorPlugin = require('bell-on-bundler-error-plugin');
 
 const webpackConfig = {
     entry: {
-      fourth: './fourthTask(es+babel)/index.js',
-      fifth: './fifthTask(deepJS)/index.js',
+        fourth: './fourthTask(es+babel)/index.js',
+        fifth: './fifthTask(deepJS)/index.js'
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, './dist'),
-      },
+        path: path.resolve(__dirname, './dist')
+    },
     watch: true,
     module: {
         rules: [
@@ -17,17 +17,17 @@ const webpackConfig = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 include: path.join(__dirname, './fourthTask(es+babel)'),
-                use: ['babel-loader'],
-              }, {
+                use: ['babel-loader']
+            }, {
                 test:    /\.js$/,
                 exclude: /node_modules/,
-                loader: 'jscs-loader',
-              },
-        ],
-      },
+                loader: 'jscs-loader'
+            }
+        ]
+    },
     plugins: [
-        new BellOnBundlerErrorPlugin(),
-    ],
-  };
+        new BellOnBundlerErrorPlugin()
+    ]
+};
 
 module.exports = webpackConfig;
