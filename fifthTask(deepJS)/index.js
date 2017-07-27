@@ -1,7 +1,7 @@
 // you can import individual functions with curvy brackets
-import MyPromise from './Promise';
+import {getAsync, setAsync} from './Promise';
 
-(function () {
-  window.getAsync = MyPromise.getAsync;
-  window.setAsync = MyPromise.setAsync;
+(function() {
+    window.getAsync = getAsync;
+    window.setAsync = setAsync;
 })();
