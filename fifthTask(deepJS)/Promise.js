@@ -24,20 +24,26 @@ const setValue = (key, value, callback) => {
     }
 };
 
-const setAsync = (key, value) => new Promise(function(resolve) {
-    setValue(key, value, function() {
-        return resolve();
+export function setAsync(key, value) {
+    return new Promise(resolve => {
+        setValue(key, value, function() {
+            return resolve();
+        });
     });
-});
-
-const getAsync = (key) => new Promise(function(resolve) {
-    getValue(key, function(value) {
-        return resolve(value);
-    });
-});
-
-export default {
-    getAsync,
-    setAsync
 };
 
+export function  getAsync(key) {
+    return new Promise(resolve => {
+        getValue(key, function(value) {
+            return resolve(value);
+        });
+    });
+}
+
+export function getAsyncFew(key) {
+    return getAsync(key)
+        .then(() => getAsync(key))
+        .then(() => getAsync(key))
+        .then(() => getAsync(key))
+        .then(() => getAsync(key));
+}
